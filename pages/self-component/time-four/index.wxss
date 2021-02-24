@@ -1,0 +1,27 @@
+.root {
+  padding: 20rpx 30rpx;
+  display: flex;
+  align-items: center;
+}
+.left {
+  margin-right: 40rpx;
+  min-width: 190rpx;
+  text-align: right;
+}
+.right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.rect {
+  height: 60rpx;
+  flex: 1;
+  /* border: 1px solid #80a0c9; */
+  border: 1px solid #3c6a9b;
+}
+.rect.active {
+  background: #80a0c9;
+}
+.rect:not(:first-child) {
+  border-left: none;
+}

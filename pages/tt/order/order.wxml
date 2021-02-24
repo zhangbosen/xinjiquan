@@ -1,0 +1,14 @@
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">面试列表</view>
+</cu-custom>
+<view class="cu-timeline">
+  <view class="cu-time">安排</view>
+  <view wx:for="{{list}}" class="cu-item text-{{item.color}}">
+    <view class="content bg-{{item.color}} shadow-blur">
+      <view>{{item.date}} {{item.time}}</view>
+      <view>{{item.name}} {{item.sex}} 来自{{item.addr}}</view>
+      <view>{{item.comment}}</view>
+    </view>
+  </view>
+</view>

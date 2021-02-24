@@ -1,0 +1,54 @@
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">面试预约</view>
+</cu-custom>
+<form>
+	<view class="cu-form-group margin-top">
+		<view class="title">姓名</view>
+		<input placeholder="您的姓名" bindinput="nameInput"></input>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">性别</view>
+		<picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+			<view class="picker">
+				{{index?picker[index]:'您的性别'}}
+			</view>
+		</picker>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">来自</view>
+		<picker mode="region" bindchange="RegionChange" value="{{region}}" custom-item="{{customItem}}">
+			<view class="picker">
+				{{region[0]}}，{{region[1]}}，{{region[2]}}
+			</view>
+		</picker>
+	</view>
+
+
+	<view class="cu-form-group margin-top">
+		<view class="title">预约日期</view>
+		<picker mode="date" value="{{date}}" start="2015-09-01" end="2050-09-01" bindchange="DateChange">
+			<view class="picker">
+				{{date}}
+			</view>
+		</picker>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">预约时间</view>
+		<picker mode="time" value="{{time}}" start="13:00" end="17:59" bindchange="TimeChange">
+			<view class="picker">
+				{{time}}
+			</view>
+		</picker>
+	</view>
+
+	<view class="cu-form-group align-start">
+		<view class="title">备注</view>
+		<textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="commentInput" placeholder="有话要说..."></textarea>
+	</view>
+
+	<!-- 按钮 -->
+	<view class="padding flex flex-direction">
+  	<button class="cu-btn bg-green lg shadow" bindtap="submit">提交</button>
+	</view>
+</form>

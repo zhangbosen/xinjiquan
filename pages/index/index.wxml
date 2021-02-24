@@ -1,0 +1,1 @@
+<basics wx:if="{{PageCur=='basics'}}"></basics>

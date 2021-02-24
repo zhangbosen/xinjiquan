@@ -1,0 +1,38 @@
+.zbs-top {
+  display: flex;
+  flex-direction: row;
+}
+.zbs-top .tags-con {
+  flex: 1;
+  overflow: hidden;
+}
+.zbs-top .btns-con {
+  width: 100rpx;
+  position: relative;
+}
+.zbs-top .btns-con .self-btn {
+  padding: 0;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  font-size: 48rpx;
+  position: absolute;
+  left: 10rpx;
+  top: 40rpx;
+  z-index: 1;
+}
+.zbs-top .btns-con::after {
+  content: "";
+	position: absolute;
+	width: 100rpx;
+	height: 100rpx;
+	top: 30rpx;
+	left: 0;
+	right: 0;
+	margin: auto;
+	/* box-shadow: 0 -3rpx 8rpx rgba(0, 0, 0, 0.08); */
+	border-radius: 50rpx;
+	background-color: inherit;
+	z-index: 0;
+
+}

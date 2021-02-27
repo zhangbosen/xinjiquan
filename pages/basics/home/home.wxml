@@ -54,7 +54,18 @@
             </view>
           </view>
 
-          <view class="item-time pt10">{{item.time}}</view>
+          <view class="item-bot pt10">
+            <view>
+              <text>{{item.time}}</text>
+            </view>
+            <view>
+                <button class="cu-btn sm bg-olive">
+                  <view></view>
+                  <view></view>
+                </button>
+            </view>
+            
+          </view>
 
         </view>
       </view>

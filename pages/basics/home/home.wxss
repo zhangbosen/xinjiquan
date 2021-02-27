@@ -91,6 +91,7 @@
 
 /* 1张照片的样式 */
 .item-pic-only .pic-item {
+  overflow: hidden;
   box-sizing: border-box;
   max-width: 400rpx;
   max-height: 400rpx;
@@ -98,14 +99,28 @@
 
 
 
-
-
-
-
-.zbs-con .self-item .item-right .item-time {
+.zbs-con .self-item .item-right .item-bot {
   color: #6c6c6c;
   font-size: 20rpx;
+  display: flex;
+  justify-content: space-between;
 }
+.item-bot .cu-btn.sm {
+  height: 36rpx;
+  width: 60rpx;
+  padding: 0;
+}
+.item-bot .cu-btn.sm view {
+  width: 6rpx; 
+  height: 6rpx;
+  border-radius: 50%; 
+  background: white; 
+  margin: 0 4rpx;
+}
+
+
+
+
 
 .pt10 {
   padding-top: 10rpx;

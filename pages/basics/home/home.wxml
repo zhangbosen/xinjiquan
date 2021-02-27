@@ -48,9 +48,9 @@
             </view>
           </view>
           <!-- 1张照片 -->
-          <view class="item-pic onlyOne pt10" wx:if="{{item.pics && item.pics.length === 1}}">
+          <view class="item-pic-only pt10" wx:if="{{item.pics && item.pics.length === 1}}">
             <view class="pic-item" wx:for="{{item.pics}}" wx:for-item="pic">
-              <image src="{{pic}}" mode="aspectFit"></image>
+              <image src="{{pic}}" mode="widthFix"></image>
             </view>
           </view>
 

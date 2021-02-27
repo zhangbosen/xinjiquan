@@ -90,14 +90,12 @@
 }
 
 /* 1张照片的样式 */
-.item-pic.onlyOne .pic-item {
-  width: 400rpx;
-  height: 400rpx;
+.item-pic-only .pic-item {
+  box-sizing: border-box;
+  max-width: 400rpx;
+  max-height: 400rpx;
 }
-.item-pic.onlyOne .pic-item image {
-  max-width: 100%;
-  max-height: 100%;
-}
+
 
 
 

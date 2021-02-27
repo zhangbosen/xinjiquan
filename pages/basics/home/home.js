@@ -34,6 +34,164 @@ Component({
         id: 6,
         name: '热点'
       },
+    ],
+    msgs: [
+      {
+        avatar: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1686747870,3612891527&fm=11&gp=0.jpg',
+        name: '张三',
+        time: '刚刚',
+        textCon: '急需大车司机一名, 有意请联系 18287653456',
+        pics: [
+          'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2972603583,638540490&fm=26&gp=0.jpg',
+          'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1557383261,2003634214&fm=26&gp=0.jpg',
+          'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2972603583,638540490&fm=26&gp=0.jpg',
+        ]
+      },
+      {
+        avatar: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2968093113,1433777138&fm=26&gp=0.jpg',
+        name: '刘能',
+        time: '三分钟前',
+        textCon: '老老老老~四, 玉田又欺负我家刘英了',
+        pics: [
+          'https://pic.rmb.bdstatic.com/8bd896d48c8de43197af1dc001ab5890.jpeg',
+          'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2972603583,638540490&fm=26&gp=0.jpg',
+          'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1557383261,2003634214&fm=26&gp=0.jpg',
+          'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2972603583,638540490&fm=26&gp=0.jpg'
+        ]
+      },
+      {
+        avatar: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Finews.gtimg.com%2Fnewsapp_match%2F0%2F8562795436%2F0.jpg&refer=http%3A%2F%2Finews.gtimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1616747050&t=a25cdc2735faa616214234e7c2e04f08',
+        name: '赵四',
+        time: '五分钟前',
+        textCon: '亲家, 去打谢广坤啊',
+        pics: [
+          'https://ss3.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/baike/pic/item/503d269759ee3d6d4fdbbe834d166d224f4ade5c.jpg'
+        ]
+      },
+      {
+        avatar: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201407%2F26%2F20140726212013_KceWJ.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1616747127&t=35975494e5c789a8255761de24f6dc02',
+        name: '广坤',
+        time: '一小时前',
+        textCon: '刘能太tm欠了',
+        pics: [
+          'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2972603583,638540490&fm=26&gp=0.jpg',
+          'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1557383261,2003634214&fm=26&gp=0.jpg'
+        ]
+      },
+      {
+        avatar: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1686747870,3612891527&fm=11&gp=0.jpg',
+        name: '张三',
+        time: '刚刚',
+        textCon: '急需大车司机一名, 有意请联系 18287653456',
+        pics: [
+          'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2972603583,638540490&fm=26&gp=0.jpg',
+          'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1557383261,2003634214&fm=26&gp=0.jpg'
+        ]
+      },
+      {
+        avatar: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2968093113,1433777138&fm=26&gp=0.jpg',
+        name: '刘能',
+        time: '三分钟前',
+        textCon: '老老老老~四, 玉田又欺负我家刘英了',
+        pics: [
+          'https://pic.rmb.bdstatic.com/8bd896d48c8de43197af1dc001ab5890.jpeg'
+        ]
+      },
+      {
+        avatar: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Finews.gtimg.com%2Fnewsapp_match%2F0%2F8562795436%2F0.jpg&refer=http%3A%2F%2Finews.gtimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1616747050&t=a25cdc2735faa616214234e7c2e04f08',
+        name: '赵四',
+        time: '五分钟前',
+        textCon: '亲家, 去打谢广坤啊',
+        pics: [
+          'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3704454510,170060629&fm=26&gp=0.jpg'
+        ]
+      },
+      {
+        avatar: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201407%2F26%2F20140726212013_KceWJ.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1616747127&t=35975494e5c789a8255761de24f6dc02',
+        name: '广坤',
+        time: '一小时前',
+        textCon: '刘能太tm欠了',
+        pics: [
+          'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2972603583,638540490&fm=26&gp=0.jpg',
+          'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1557383261,2003634214&fm=26&gp=0.jpg'
+        ]
+      },
+      {
+        avatar: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1686747870,3612891527&fm=11&gp=0.jpg',
+        name: '张三',
+        time: '刚刚',
+        textCon: '急需大车司机一名, 有意请联系 18287653456',
+        pics: [
+          'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2972603583,638540490&fm=26&gp=0.jpg',
+          'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1557383261,2003634214&fm=26&gp=0.jpg'
+        ]
+      },
+      {
+        avatar: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2968093113,1433777138&fm=26&gp=0.jpg',
+        name: '刘能',
+        time: '三分钟前',
+        textCon: '老老老老~四, 玉田又欺负我家刘英了',
+        pics: [
+          'https://pic.rmb.bdstatic.com/8bd896d48c8de43197af1dc001ab5890.jpeg'
+        ]
+      },
+      {
+        avatar: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Finews.gtimg.com%2Fnewsapp_match%2F0%2F8562795436%2F0.jpg&refer=http%3A%2F%2Finews.gtimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1616747050&t=a25cdc2735faa616214234e7c2e04f08',
+        name: '赵四',
+        time: '五分钟前',
+        textCon: '亲家, 去打谢广坤啊',
+        pics: [
+          'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3704454510,170060629&fm=26&gp=0.jpg'
+        ]
+      },
+      {
+        avatar: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201407%2F26%2F20140726212013_KceWJ.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1616747127&t=35975494e5c789a8255761de24f6dc02',
+        name: '广坤',
+        time: '一小时前',
+        textCon: '刘能太tm欠了',
+        pics: [
+          'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2972603583,638540490&fm=26&gp=0.jpg',
+          'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1557383261,2003634214&fm=26&gp=0.jpg'
+        ]
+      },
+      {
+        avatar: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1686747870,3612891527&fm=11&gp=0.jpg',
+        name: '张三',
+        time: '刚刚',
+        textCon: '急需大车司机一名, 有意请联系 18287653456',
+        pics: [
+          'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2972603583,638540490&fm=26&gp=0.jpg',
+          'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1557383261,2003634214&fm=26&gp=0.jpg'
+        ]
+      },
+      {
+        avatar: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2968093113,1433777138&fm=26&gp=0.jpg',
+        name: '刘能',
+        time: '三分钟前',
+        textCon: '老老老老~四, 玉田又欺负我家刘英了',
+        pics: [
+          'https://pic.rmb.bdstatic.com/8bd896d48c8de43197af1dc001ab5890.jpeg'
+        ]
+      },
+      {
+        avatar: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Finews.gtimg.com%2Fnewsapp_match%2F0%2F8562795436%2F0.jpg&refer=http%3A%2F%2Finews.gtimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1616747050&t=a25cdc2735faa616214234e7c2e04f08',
+        name: '赵四',
+        time: '五分钟前',
+        textCon: '亲家, 去打谢广坤啊',
+        pics: [
+          'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3704454510,170060629&fm=26&gp=0.jpg'
+        ]
+      },
+      {
+        avatar: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201407%2F26%2F20140726212013_KceWJ.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1616747127&t=35975494e5c789a8255761de24f6dc02',
+        name: '广坤',
+        time: '一小时前',
+        textCon: '刘能太tm欠了',
+        pics: [
+          'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2972603583,638540490&fm=26&gp=0.jpg',
+          'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1557383261,2003634214&fm=26&gp=0.jpg'
+        ]
+      }
     ]
   },
   methods: {

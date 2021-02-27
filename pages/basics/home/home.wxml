@@ -26,7 +26,38 @@
 
     <!-- 下 消息展示区 -->
     <view class="zbs-con">
-      内容区域
+      <view class="self-item" wx:for="{{msgs}}" wx:key="*this">
+        <view>
+          <image src="{{item.avatar}}" class="item-avatar"></image>
+        </view>
+
+        <view class="item-right">
+          <view class="item-title">{{item.name}}</view>
+          <view class="item-text pt10">{{item.textCon}}</view>
+
+          <!-- 2、3、5、6、7、8、9张照片 -->
+          <view class="item-pic pt10" wx:if="{{item.pics && item.pics.length !== 1 && item.pics.length !== 4}}">
+            <view class="pic-item" wx:for="{{item.pics}}" wx:for-item="pic">
+              <image src="{{pic}}" mode="aspectFill"></image>
+            </view>
+          </view>
+          <!-- 4张照片 -->
+          <view class="item-pic onlyFour pt10" wx:if="{{item.pics && item.pics.length === 4}}">
+            <view class="pic-item" wx:for="{{item.pics}}" wx:for-item="pic">
+              <image src="{{pic}}" mode="aspectFill"></image>
+            </view>
+          </view>
+          <!-- 1张照片 -->
+          <view class="item-pic onlyOne pt10" wx:if="{{item.pics && item.pics.length === 1}}">
+            <view class="pic-item" wx:for="{{item.pics}}" wx:for-item="pic">
+              <image src="{{pic}}" mode="aspectFit"></image>
+            </view>
+          </view>
+
+          <view class="item-time pt10">{{item.time}}</view>
+
+        </view>
+      </view>
     </view>
     
   </view>

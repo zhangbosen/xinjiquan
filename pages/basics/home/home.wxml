@@ -18,7 +18,7 @@
       </scroll-view>
       <!-- 右 发布按钮 -->
       <view class="bg-white btns-con">
-        <navigator url="/page/publish/index/index" hover-class="navigator-hover">
+        <navigator url="/pages/publish/index/index" hover-class="navigator-hover">
             <button class="cu-btn cuIcon-add bg-green shadow self-btn"></button>
         </navigator>
       </view>

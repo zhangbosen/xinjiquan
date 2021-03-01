@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/publish/index/index",
     "pages/index/index",
+    "pages/publish/index/index",
+
     "pages/basics/home/home",
     "pages/basics/layout/layout",
     "pages/basics/background/background",

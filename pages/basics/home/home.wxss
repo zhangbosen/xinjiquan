@@ -47,6 +47,7 @@
   border-bottom: 1px solid #ccc;
   display: flex;
   flex-direction: row;
+  padding-bottom: 0;
 }
 .zbs-con .self-item .item-avatar {
   width: 80rpx; 
@@ -99,23 +100,45 @@
 
 
 
-.zbs-con .self-item .item-right .item-bot {
+.zbs-con .self-item .item-right .item-pub {
   color: #6c6c6c;
   font-size: 20rpx;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 70rpx;
+  box-sizing: content-box;
 }
-.item-bot .cu-btn.sm {
+.item-pub .cu-btn.callBtn {
   height: 36rpx;
   width: 60rpx;
   padding: 0;
 }
-.item-bot .cu-btn.sm view {
+.item-pub .cu-btn.callBtn view {
   width: 6rpx; 
   height: 6rpx;
   border-radius: 50%; 
   background: white; 
   margin: 0 4rpx;
+}
+
+.item-pub .pub-btns {
+  background: #3b3b3b;
+  border-radius: 10rpx;
+  position: absolute; 
+  bottom: 0; 
+  right: 66rpx;
+  display: none;
+}
+.item-pub .pub-btns .cu-btn {
+  width: 160rpx;
+  background: #3b3b3b;
+  border-radius: 10rpx;
+  height: 70rpx;
+}
+.item-pub .pub-btns .cu-btn .selfIcon {
+  padding-right: 10rpx;
 }
 
 

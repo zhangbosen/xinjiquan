@@ -1,4 +1,4 @@
-<scroll-view scroll-y class="scrollPage">
+<scroll-view scroll-y class="scrollPage" bindscroll="scrollFn">
   <!-- 头部 -->
   <cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/cjkz2329.jpg">
     <view slot="content">
@@ -12,7 +12,7 @@
     <view class="zbs-top">
       <!-- 左 标签 -->
       <scroll-view scroll-x class="bg-white nav tags-con" scroll-with-animation scroll-left="{{scrollLeft}}">
-        <view class="cu-item {{index==TabCur?'text-green cur':''}}" wx:for="{{tags}}" wx:key="*this" bindtap="tabSelect" data-id="{{index}}">
+        <view class="cu-item {{index==TabCur?'text-green cur':''}}" wx:for="{{tags}}" wx:key="id" bindtap="tabSelect" data-id="{{index}}">
           {{item.name}}
         </view>
       </scroll-view>
@@ -26,7 +26,7 @@
 
     <!-- 下 消息展示区 -->
     <view class="zbs-con">
-      <view class="self-item" wx:for="{{msgs}}" wx:key="*this">
+      <view class="self-item" wx:for="{{msgs}}" wx:key="id">
         <view>
           <image src="{{item.avatar}}" class="item-avatar"></image>
         </view>
@@ -37,32 +37,44 @@
 
           <!-- 2、3、5、6、7、8、9张照片 -->
           <view class="item-pic pt10" wx:if="{{item.pics && item.pics.length !== 1 && item.pics.length !== 4}}">
-            <view class="pic-item" wx:for="{{item.pics}}" wx:for-item="pic">
+            <view class="pic-item" wx:for="{{item.pics}}" wx:for-item="pic" wx:key="index">
               <image src="{{pic}}" mode="aspectFill"></image>
             </view>
           </view>
           <!-- 4张照片 -->
           <view class="item-pic onlyFour pt10" wx:if="{{item.pics && item.pics.length === 4}}">
-            <view class="pic-item" wx:for="{{item.pics}}" wx:for-item="pic">
+            <view class="pic-item" wx:for="{{item.pics}}" wx:for-item="pic" wx:key="index">
               <image src="{{pic}}" mode="aspectFill"></image>
             </view>
           </view>
           <!-- 1张照片 -->
           <view class="item-pic-only pt10" wx:if="{{item.pics && item.pics.length === 1}}">
-            <view class="pic-item" wx:for="{{item.pics}}" wx:for-item="pic">
+            <view class="pic-item" wx:for="{{item.pics}}" wx:for-item="pic" wx:key="index">
               <image src="{{pic}}" mode="widthFix"></image>
             </view>
           </view>
 
-          <view class="item-bot pt10">
+          <!-- 时间、评论点赞 容器 -->
+          <view class="item-pub">
             <view>
               <text>{{item.time}}</text>
             </view>
             <view>
-                <button class="cu-btn sm bg-olive">
+                <button class="cu-btn sm bg-grey callBtn" bindtap="callPubFn" data-item="{{item}}">
                   <view></view>
                   <view></view>
                 </button>
+            </view>
+
+            <view class="pub-btns" style="display: {{item.flag ? 'block' : 'none'}}">
+              <button class="cu-btn bg-grey">
+                <text class="cuIcon-like selfIcon"></text>
+                赞
+              </button>
+              <button class="cu-btn bg-grey">
+                <text class="cuIcon-comment selfIcon"></text>
+                评论
+              </button>
             </view>
             
           </view>
@@ -72,5 +84,6 @@
     </view>
     
   </view>
+
 
 </scroll-view>

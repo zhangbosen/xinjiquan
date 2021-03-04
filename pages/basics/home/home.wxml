@@ -11,13 +11,13 @@
     <!-- 上 标签和发布按钮 -->
     <view class="zbs-top">
       <!-- 左 标签 -->
-      <scroll-view scroll-x class="bg-white nav tags-con" scroll-with-animation scroll-left="{{scrollLeft}}">
+      <scroll-view scroll-x class="bg-gray nav tags-con" scroll-with-animation scroll-left="{{scrollLeft}}">
         <view class="cu-item {{index==TabCur?'text-green cur':''}}" wx:for="{{tags}}" wx:key="id" bindtap="tabSelect" data-id="{{index}}">
           {{item.name}}
         </view>
       </scroll-view>
       <!-- 右 发布按钮 -->
-      <view class="bg-white btns-con">
+      <view class="bg-gray btns-con">
         <navigator url="/pages/publish/index/index" hover-class="navigator-hover">
             <button class="cu-btn cuIcon-add bg-green shadow self-btn"></button>
         </navigator>
@@ -73,7 +73,7 @@
                 <text class="cuIcon-like selfIcon"></text>
                 赞
               </button>
-              <button class="cu-btn bg-grey">
+              <button class="cu-btn bg-grey" bindtap="callComFn">
                 <text class="cuIcon-comment selfIcon"></text>
                 评论
               </button>
@@ -86,6 +86,21 @@
     </view>
     
   </view>
+
+  <!-- 输入框 -->
+  <view class="comment-box" style="display: {{show_input ? 'flex' : 'none'}}; bottom: {{bottom}}px;">
+    <input 
+      value="{{value}}" 
+      focus="{{focus}}" 
+      type="text" 
+      placeholder="评论" 
+      class="com-input"
+      bindinput="comFn"
+      bindkeyboardheightchange="kbFn"
+    />
+    <button class="cu-btn {{value ? 'bg-green': 'com-btn-dis'}}">发送</button>
+  </view>
+
 
 
 </scroll-view>

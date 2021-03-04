@@ -95,12 +95,29 @@ Component({
         flag: false
       }
     ],
+    show_input: false, // 是否显示评论输入框
+    value: '', // 评论输入框的值
+    focus: false, // 评论输入框获取焦点
+    bottom: 0, // 输入框距离底部位置
   },
   methods: {
     tabSelect(e) {
       this.setData({
         TabCur: e.currentTarget.dataset.id,
         scrollLeft: (e.currentTarget.dataset.id-1)*60
+      })
+    },
+    // 全局滚动
+    scrollFn() {
+      this.setData({
+        msgs: this.data.msgs.map(item => {
+          item.flag = false;
+          return item;
+        }),
+        show_input: false,
+        value: '',
+        focus: false,
+        bottom: 0
       })
     },
     // 右下角按钮
@@ -120,13 +137,28 @@ Component({
       }) 
 
     },
-    // 全局滚动
-    scrollFn() {
+    // 唤出评论输入框
+    callComFn(e) {
       this.setData({
+        show_input: true,
+        focus: true,
         msgs: this.data.msgs.map(item => {
           item.flag = false;
           return item;
-        })
+        }),
+      })
+    },
+    // 评论输入框的input事件
+    comFn(e) {
+      let v = e.detail.value;
+      this.setData({
+        value: v.trim()
+      })
+    },
+    // 键盘高度的变化 事件
+    kbFn(e) {
+      this.setData({
+        bottom: e.detail.height
       })
     }
     

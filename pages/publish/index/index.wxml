@@ -1,0 +1,54 @@
+<view class="publish">
+
+	<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+		<view slot="backText">返回</view>
+		<view slot="content">发布</view>
+		<!-- <view slot="right">    <button class="cu-btn round bg-green shadow">发布</button></view> -->
+	</cu-custom>
+
+	<form>
+		<!-- !!!!! placeholder 在ios表现有偏移 建议使用 第一种样式 -->
+		<view class="cu-form-group margin-top">
+			<textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaInput"
+				placeholder="您要发布的内容..."></textarea>
+		</view>
+
+		<!-- <view class="cu-bar bg-white margin-top">
+		<view class="action">
+		</view>
+		<view class="action">
+			{{imgList.length}}/9
+		</view>
+	</view> -->
+
+		<view class="cu-form-group uploadimg">
+			<view class="grid col-3 grid-square flex-sub ">
+				<view class="bg-img" wx:for="{{imgList}}" wx:key="index" bindtap="ViewImage" data-url="{{imgList[index]}}">
+					<image src='{{imgList[index]}}' mode='aspectFill'></image>
+					<view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+						<text class="cuIcon-close"></text>
+					</view>
+				</view>
+				<view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<4}}">
+					<text class="cuIcon-cameraadd"></text>
+				</view>
+			</view>
+		</view>
+
+		<view class="cu-form-group ">
+			<view class="title">类别</view>
+			<picker bindchange="PickerChange" value="{{index}}" range-key="name" range="{{catalog}}">
+				<view class="picker">
+					{{catalog[index].name}}
+				</view>
+			</picker>
+		</view>
+	</form>
+
+	<view class="padding-xl">
+		<button class="cu-btn block bg-blue margin-tb-sm lg" loading bindtap="handlePublish">
+			<!-- <text class="cuIcon-loading2 cuIconfont-spin"></text> -->
+			发布
+		</button>
+	</view>
+</view>

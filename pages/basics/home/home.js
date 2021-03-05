@@ -120,6 +120,10 @@ Component({
         bottom: 0
       })
     },
+    // 滚动到底部加载
+    loadFn(e) {
+      console.log("滚动到底部了。。。", e)
+    },
     // 右下角按钮
     callPubFn(e) {
       let v = e.currentTarget.dataset.item;
@@ -160,7 +164,16 @@ Component({
       this.setData({
         bottom: e.detail.height
       })
-    }
+    },
+    //图片 预览
+    viewFn(e) {
+      let dt = e.currentTarget.dataset;
+      wx.previewImage({
+        current: dt.cur, // 当前显示图片的http链接
+        urls: dt.all// 需要预览的图片http链接列表
+      })
+      
+    },
     
   }
 })

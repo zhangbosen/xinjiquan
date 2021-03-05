@@ -1,4 +1,4 @@
-<scroll-view scroll-y class="scrollPage" bindscroll="scrollFn">
+<scroll-view scroll-y class="scrollPage" bindscroll="scrollFn" bindscrolltolower="loadFn">
   <!-- 头部 -->
   <cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/cjkz2329.jpg">
     <view slot="content">
@@ -39,19 +39,19 @@
 
           <!-- 2、3、5、6、7、8、9张照片 -->
           <view class="item-pic pt10" wx:if="{{item.pics && item.pics.length !== 1 && item.pics.length !== 4}}">
-            <view class="pic-item" wx:for="{{item.pics}}" wx:for-item="pic" wx:key="index">
+            <view class="pic-item" wx:for="{{item.pics}}" wx:for-item="pic" wx:key="index" bindtap="viewFn" data-cur="{{pic}}" data-all="{{item.pics}}">
               <image src="{{pic}}" mode="aspectFill"></image>
             </view>
           </view>
           <!-- 4张照片 -->
           <view class="item-pic onlyFour pt10" wx:if="{{item.pics && item.pics.length === 4}}">
-            <view class="pic-item" wx:for="{{item.pics}}" wx:for-item="pic" wx:key="index">
+            <view class="pic-item" wx:for="{{item.pics}}" wx:for-item="pic" wx:key="index" bindtap="viewFn" data-cur="{{pic}}" data-all="{{item.pics}}">
               <image src="{{pic}}" mode="aspectFill"></image>
             </view>
           </view>
           <!-- 1张照片 -->
           <view class="item-pic-only pt10" wx:if="{{item.pics && item.pics.length === 1}}">
-            <view class="pic-item" wx:for="{{item.pics}}" wx:for-item="pic" wx:key="index">
+            <view class="pic-item" wx:for="{{item.pics}}" wx:for-item="pic" wx:key="index" bindtap="viewFn" data-cur="{{pic}}" data-all="{{item.pics}}">
               <image src="{{pic}}" mode="widthFix"></image>
             </view>
           </view>

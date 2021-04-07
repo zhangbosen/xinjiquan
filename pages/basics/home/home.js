@@ -99,6 +99,7 @@ Component({
     value: '', // 评论输入框的值
     focus: false, // 评论输入框获取焦点
     bottom: 0, // 输入框距离底部位置
+    scrollable: true, // 是否可以滚动
   },
   methods: {
     tabSelect(e) {
@@ -157,6 +158,18 @@ Component({
       let v = e.detail.value;
       this.setData({
         value: v.trim()
+      })
+    },
+    // 评论输入框的focus事件
+    focusFn(e) {
+      this.setData({
+        scrollable: false
+      })
+    },
+    // 评论输入框的blur事件
+    blurFn(e) {
+      this.setData({
+        scrollable: true
       })
     },
     // 键盘高度的变化 事件

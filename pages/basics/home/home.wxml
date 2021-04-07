@@ -1,4 +1,4 @@
-<scroll-view scroll-y class="scrollPage" bindscroll="scrollFn" bindscrolltolower="loadFn">
+<scroll-view scroll-y="{{scrollable}}" class="scrollPage" bindscroll="scrollFn" bindscrolltolower="loadFn">
   <!-- 头部 -->
   <cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/cjkz2329.jpg">
     <view slot="content">
@@ -90,13 +90,17 @@
   <!-- 输入框 -->
   <view class="comment-box" style="display: {{show_input ? 'flex' : 'none'}}; bottom: {{bottom}}px;">
     <input 
-      value="{{value}}" 
+      value="{{value}}"
       focus="{{focus}}" 
       type="text" 
       placeholder="评论" 
       class="com-input"
       bindinput="comFn"
       bindkeyboardheightchange="kbFn"
+      bindfocus="focusFn"
+      bindblur="blurFn"
+      adjust-position="{{false}}"
+      cursor-spacing="155rpx"
     />
     <button class="cu-btn {{value ? 'bg-green': 'com-btn-dis'}}">发送</button>
   </view>
